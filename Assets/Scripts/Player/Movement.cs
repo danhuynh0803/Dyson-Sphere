@@ -9,6 +9,7 @@ public class Movement : MonoBehaviour
     public float rotateZ;
     public Animator animator;
     public Rigidbody rigidBody;
+
     void Update()
     {
         if(!Input.GetMouseButton(1))
