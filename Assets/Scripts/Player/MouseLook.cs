@@ -46,7 +46,7 @@ public class MouseLook : MonoBehaviour
             playerAnimator.SetFloat("Body_Horizontal_f", rotationY / maximumCharacterBodyRotationY);
             playerAnimator.SetFloat("Body_Vertical_f", rotationX / maximumCharacterBodyRotationX);
             playerAnimator.SetInteger("WeaponType_int", 1);
-            playerWeapon.transform.localEulerAngles = new Vector3(playerWeapon.transform.localEulerAngles.x, 90f, 90f);
+            //playerWeapon.transform.localEulerAngles = new Vector3(playerWeapon.transform.localEulerAngles.x, 90f, 90f);
             rotationX = Mathf.Clamp(rotationX, minimumX, maximumX);
             rotationY = Mathf.Clamp(rotationY, minimumY, maximumY);
             transform.localEulerAngles = new Vector3(-1f * rotationX, rotationY, 0);
@@ -54,7 +54,7 @@ public class MouseLook : MonoBehaviour
         else
         {
             transform.localEulerAngles = new Vector3(defaultRotationX, defaultRotationY, transform.localEulerAngles.z);
-            playerWeapon.transform.localEulerAngles = new Vector3(playerWeapon.transform.localEulerAngles.x, 90f, 0f);
+            //playerWeapon.transform.localEulerAngles = new Vector3(playerWeapon.transform.localEulerAngles.x, 90f, 0f);
             playerAnimator.SetInteger("WeaponType_int", 0);
             playerAnimator.SetFloat("Body_Horizontal_f", 0f);
             playerAnimator.SetFloat("Body_Vertical_f", 0f);
