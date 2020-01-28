@@ -17,7 +17,9 @@ class InfoText
 
 public class InfoBoard : MonoBehaviour
 {
-    public Text hudText;
+    public Text hudText;         // Text that is displayed for a brief moment
+    public Text conditionalText; // Text that is displayed when a condition is met
+    public float letterDelay = 0.1f;
 
     #region Singleton
     public static InfoBoard instance;
@@ -36,7 +38,7 @@ public class InfoBoard : MonoBehaviour
     private void Start()
     {
         // For testing
-        //TestBoard();
+        TestBoard();
     }
 
     private void TestBoard()
@@ -47,6 +49,7 @@ public class InfoBoard : MonoBehaviour
         AddText("Defeat the enemy", 2.0f);
         AddText("Survive..", 10.0f);
     }
+
     private void Update()
     {
         if (infoTextQueue.Count > 0)
@@ -73,11 +76,23 @@ public class InfoBoard : MonoBehaviour
         infoTextQueue.Enqueue(newInfoText);
     }
 
+    public void DisplayText(string text)
+    {
+        conditionalText.text = text;
+    }
+
     private IEnumerator DisplayAndWait(InfoText infoText)
     {
-        // Display the text
+        // Clear any old text before display the new text
+        hudText.text = "";
+        // Display the text letter-by-letter
         isDisplayingText = true;
-        hudText.text = infoText.text;
+        foreach (char letter in infoText.text)
+        {
+            // TODO: play some sound when a new letter is appended
+            hudText.text += letter;
+            yield return new WaitForSeconds(letterDelay);
+        }
 
         yield return new WaitForSeconds(infoText.timer);
 
