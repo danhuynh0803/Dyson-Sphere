@@ -58,7 +58,6 @@ public class InfoBoard : MonoBehaviour
             if (!isDisplayingText)
             {
                 InfoText infoText = infoTextQueue.Dequeue();
-                Debug.Log("Display text:" + infoText.text + " for " + infoText.timer + " seconds");
                 StartCoroutine(DisplayAndWait(infoText));
             }
         }
