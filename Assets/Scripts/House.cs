@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class House : MonoBehaviour
 {
+    public int maxScore = 10;
     public GameObject[] houseProgressionModels;
     public int[] tierRequirement;
 
@@ -18,7 +19,13 @@ public class House : MonoBehaviour
         // Check that a player has enough fragments to advance a tier
         if (!hasSwappedTier)
         {
+        }
 
+        if (currScore >= maxScore)
+        {
+            // Setting this to true will trigger win scene
+            // TODO maybe make a win panel instead
+            GameController.instance.isGameOver = true;
         }
     }
 
