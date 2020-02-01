@@ -324,9 +324,12 @@ MonoBehaviour:
   torque: 50
   planet: {fileID: 1648348516}
   suctionAngle: 50
+<<<<<<< Updated upstream
   constraint: 5.2
 =======
+  debris: {fileID: 0}
   constraint: 0
+>>>>>>> Stashed changes
   maxCarriedCount: 3
   decreaseSpeedAmount: 1.5
 --- !u!54 &266387811
