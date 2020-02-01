@@ -5,14 +5,21 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerController : MonoBehaviour
 {
+    [Header("Movement parameters")]
     public float speed;
     public float torque;
     public GameObject planet;
+
+    [Header("Vacuum parameters")]
+    public float suctionAngle = 50;
 
     Rigidbody rb;
     float currentSpeed;
     Vector3 mRotation;
 
+
+    public float maxCarriedCount = 3;
+    public float decreaseSpeedAmount = 1.5f;
     private int carriedCount;
 
     void Start()
@@ -39,6 +46,11 @@ public class PlayerController : MonoBehaviour
         {
             currentSpeed = speed;
         }
+
+        // Lower the speed based off of how many objects the player is carrying
+        currentSpeed -= (decreaseSpeedAmount * carriedCount);
+
+
         // Tank controls - Move forward/backward on Z-axis
         float z = Input.GetAxis("Vertical");
         transform.Translate(Vector3.forward * z * currentSpeed * Time.deltaTime);
@@ -63,10 +75,17 @@ public class PlayerController : MonoBehaviour
         // Use suction to absorb
         // Absorb
 
-        carriedCount++;
+
+        // Suck up objects in a cone shape in front of the player
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Debug.Log("SUCC");
+            carriedCount++;
+        }
 
     }
 
+    //carriedCount++;
 
     private void Fire()
     {
