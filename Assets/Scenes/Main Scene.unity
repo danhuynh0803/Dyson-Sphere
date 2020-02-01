@@ -325,6 +325,8 @@ MonoBehaviour:
   planet: {fileID: 1648348516}
   suctionAngle: 50
   constraint: 5.2
+=======
+  constraint: 0
   maxCarriedCount: 3
   decreaseSpeedAmount: 1.5
 --- !u!54 &266387811
