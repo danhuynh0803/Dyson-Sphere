@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
-public class PlayerController : MonoBehaviour
-{
+public class PlayerController : MonoBehaviour {
     public float speed;
     public float torque;
     public GameObject planet;
@@ -41,7 +40,7 @@ public class PlayerController : MonoBehaviour
         }
         // Tank controls - Move forward/backward on Z-axis
         float z = Input.GetAxis("Vertical");
-        transform.Translate(Vector3.forward * z * currentSpeed * Time.deltaTime);
+        transform.Translate(Vector3.forward * z * currentSpeed * Time.fixedDeltaTime);
 
         // Rotate on Y axis
         float x = Input.GetAxisRaw("Horizontal");
@@ -76,5 +75,13 @@ public class PlayerController : MonoBehaviour
         }
 
         // Shoot out the object
+    }
+
+    void LateUpdate()
+    {
+        if (Vector3.Distance(transform.position, planet.transform.position) > 5.0f)
+        {
+            transform.position = 5.0f * (transform.position - planet.transform.position).normalized;
+        }
     }
 }
