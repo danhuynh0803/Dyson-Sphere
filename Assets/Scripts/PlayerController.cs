@@ -2,9 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum Player
+{
+    P1,
+    P2,
+    NONE
+};
+
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerController : MonoBehaviour
 {
+    public Player playerNumber;
+
     [Header("Movement parameters")]
     public float speed;
     public float torque;
@@ -80,33 +89,30 @@ public class PlayerController : MonoBehaviour
         // Use suction to absorb
         // Absorb
 
-
         // Suck up objects in a cone shape in front of the player
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Debug.Log("SUCC");
             carriedCount++;
         }
-
     }
-
-    //carriedCount++;
 
     private void Fire()
     {
+        if (carriedCount <= 0)
+        {
+            return;
+        }
 
         if (Input.GetKeyDown(KeyCode.Q))
         {
             GameObject debris = Instantiate(this.debris, transform.position, transform.rotation);
             debris.GetComponent<Orbiting>().planet = planet.transform;
             debris.GetComponent<Orbiting>().fireAngle = transform.eulerAngles.z;
+            debris.GetComponent<Orbiting>().controllingPlayer = playerNumber;
             Debug.Log(transform.rotation.z);
+            carriedCount--;
         }
-        if (carriedCount <= 0)
-        {
-            return;
-        }
-
 
     }
 
@@ -115,6 +121,16 @@ public class PlayerController : MonoBehaviour
         if (Vector3.Distance(transform.position, planet.transform.position) > constraint)
         {
             transform.position = constraint * (transform.position - planet.transform.position).normalized;
+        }
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.GetComponent<Fragment>())
+        {
+            Debug.Log("Carrying fragment!");
+            carriedCount++;
+            Destroy(other.gameObject);
         }
     }
 }

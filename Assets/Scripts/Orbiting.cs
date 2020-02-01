@@ -9,6 +9,9 @@ public class Orbiting : MonoBehaviour {
     public Transform planet;
     public float fireAngle;
     Rigidbody rb;
+
+    public Player controllingPlayer;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
