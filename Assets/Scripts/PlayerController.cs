@@ -60,12 +60,21 @@ public class PlayerController : MonoBehaviour
 
     private void Collect()
     {
+        // Use suction to absorb
         // Absorb
+
+        carriedCount++;
+
     }
 
 
     private void Fire()
     {
+        if (carriedCount <= 0)
+        {
+            return;
+        }
+
         // Shoot out the object
     }
 }
