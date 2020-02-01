@@ -4,23 +4,20 @@ using UnityEngine;
 
 public class House : MonoBehaviour
 {
-    public int maxScore = 10;
+    public int maxScore = 12;
     public GameObject[] houseProgressionModels;
-    public int[] tierRequirement;
-
-    private bool hasSwappedTier;
-    private int tier = 0;
+    public Material p1Color, p2Color;
 
     private int currScore = 0;
+
+    void Start()
+    {
+        currScore = 0;
+    }
 
     // Update is called once per frame
     void Update()
     {
-        // Check that a player has enough fragments to advance a tier
-        if (!hasSwappedTier)
-        {
-        }
-
         if (currScore >= maxScore)
         {
             // Setting this to true will trigger win scene
@@ -32,10 +29,27 @@ public class House : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         // Absorb fragments
-        if (other.gameObject.GetComponent<Fragment>() != null)
+        // TODO refactor so that it doesnt need to
+        // check that the object was fired
+        if (other.gameObject.GetComponent<Orbiting>() != null)
         {
             currScore++;
+            // TODO play a construction noise (hammers, saws, etc)
+
+            // Add a wall segment and change the color
+            Player controllingPlayer = other.gameObject.GetComponent<Orbiting>().controllingPlayer;
+            if (controllingPlayer == Player.P1)
+            {
+                houseProgressionModels[currScore].GetComponent<Renderer>().material = p1Color;
+            }
+            else if (controllingPlayer == Player.P2)
+            {
+                houseProgressionModels[currScore].GetComponent<Renderer>().material = p2Color;
+            }
+
             Destroy(other.gameObject);
+
+            houseProgressionModels[currScore].SetActive(true);
         }
     }
 }
