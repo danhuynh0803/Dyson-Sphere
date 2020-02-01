@@ -11,11 +11,15 @@ public class PlayerController : MonoBehaviour
 
     Rigidbody rb;
     float currentSpeed;
+    Vector3 mRotation;
+
+    private int carriedCount;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         currentSpeed = speed;
+        carriedCount = 0;
     }
 
     void FixedUpdate()
@@ -40,8 +44,9 @@ public class PlayerController : MonoBehaviour
         transform.Translate(Vector3.forward * z * currentSpeed * Time.deltaTime);
 
         // Rotate on Y axis
-        float rotationAxis = Input.GetAxis("Horizontal");
-        transform.localRotation = Quaternion.Euler(0, rotationAxis * 360 * torque * Time.deltaTime, 0);
+        float x = Input.GetAxisRaw("Horizontal");
+        mRotation.y += Time.deltaTime * x * torque;
+        transform.localRotation = Quaternion.Euler(mRotation);
     }
 
     // Orient the rb along the planet's surface normal
@@ -51,17 +56,16 @@ public class PlayerController : MonoBehaviour
         surfaceNorm = Vector3.Normalize(surfaceNorm);
 
         rb.transform.localRotation = Quaternion.FromToRotation(rb.transform.up, surfaceNorm) * rb.rotation;
-
     }
 
     private void Collect()
     {
-
+        // Absorb
     }
 
 
     private void Fire()
     {
-
+        // Shoot out the object
     }
 }
