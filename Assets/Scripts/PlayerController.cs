@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
     [Header("Vacuum parameters")]
     public float suctionAngle = 50;
 
+    public GameObject debris;
+    public float constraint;
     Rigidbody rb;
     float currentSpeed;
     Vector3 mRotation;
@@ -28,7 +30,10 @@ public class PlayerController : MonoBehaviour
         currentSpeed = speed;
         carriedCount = 0;
     }
-
+    void Update()
+    {
+        Fire();
+    }
     void FixedUpdate()
     {
         Movement();
@@ -57,7 +62,7 @@ public class PlayerController : MonoBehaviour
 
         // Rotate on Y axis
         float x = Input.GetAxisRaw("Horizontal");
-        mRotation.y += Time.deltaTime * x * torque;
+        mRotation.z += -1 * Time.fixedDeltaTime * x * torque;
         transform.localRotation = Quaternion.Euler(mRotation);
     }
 
@@ -89,19 +94,27 @@ public class PlayerController : MonoBehaviour
 
     private void Fire()
     {
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            GameObject debris = Instantiate(this.debris, transform.position, transform.rotation);
+            debris.GetComponent<Orbiting>().planet = planet.transform;
+            debris.GetComponent<Orbiting>().fireAngle = transform.eulerAngles.z;
+            Debug.Log(transform.rotation.z);
+        }
         if (carriedCount <= 0)
         {
             return;
         }
 
-        // Shoot out the object
+
     }
 
     void LateUpdate()
     {
-        if (Vector3.Distance(transform.position, planet.transform.position) > 5.0f)
+        if (Vector3.Distance(transform.position, planet.transform.position) > constraint)
         {
-            transform.position = 5.0f * (transform.position - planet.transform.position).normalized;
+            transform.position = constraint * (transform.position - planet.transform.position).normalized;
         }
     }
 }
