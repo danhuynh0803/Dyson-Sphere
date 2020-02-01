@@ -16,8 +16,8 @@ public class FragmentSpawner : MonoBehaviour
     public float spawnRadius;
 
     [Header("Spawn Delay")]
-    public float spawnDelayMin = 0.5f;
-    public float spawnDelayMax = 2.0f;
+    public float spawnDelayMin = 3.0f;
+    public float spawnDelayMax = 10.0f;
     private float spawnTimer = 0.0f;
 
     void Start()
@@ -31,7 +31,7 @@ public class FragmentSpawner : MonoBehaviour
         // Spawn the objects around the planet randomly
         if (spawnTimer <= 0)
         {
-            Debug.Log("Spawn Meteor");
+            //Debug.Log("Spawn Meteor");
             SpawnMeteor();
             spawnTimer = Random.Range(spawnDelayMin, spawnDelayMax);
         }

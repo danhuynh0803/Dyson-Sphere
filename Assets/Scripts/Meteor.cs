@@ -45,6 +45,7 @@ public class Meteor: MonoBehaviour
 
     void SpawnFragment()
     {
-        Instantiate(fragment, transform);
+        //Debug.Log("Spawn fragment");
+        Instantiate(fragment, transform.position, Quaternion.identity);
     }
 }
