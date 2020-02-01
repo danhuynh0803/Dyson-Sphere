@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour {
     public float speed;
     public float torque;
     public GameObject planet;
-
+    public float constraint;
     Rigidbody rb;
     float currentSpeed;
     Vector3 mRotation;
@@ -44,7 +44,7 @@ public class PlayerController : MonoBehaviour {
 
         // Rotate on Y axis
         float x = Input.GetAxisRaw("Horizontal");
-        mRotation.y += Time.deltaTime * x * torque;
+        mRotation.z += -1 * Time.fixedDeltaTime * x * torque;
         transform.localRotation = Quaternion.Euler(mRotation);
     }
 
@@ -79,9 +79,9 @@ public class PlayerController : MonoBehaviour {
 
     void LateUpdate()
     {
-        if (Vector3.Distance(transform.position, planet.transform.position) > 5.0f)
+        if (Vector3.Distance(transform.position, planet.transform.position) > constraint)
         {
-            transform.position = 5.0f * (transform.position - planet.transform.position).normalized;
+            transform.position = constraint * (transform.position - planet.transform.position).normalized;
         }
     }
 }
