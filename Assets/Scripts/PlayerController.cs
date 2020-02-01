@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     [Header("Vacuum parameters")]
     public float suctionAngle = 50;
 
+    public GameObject debris;
     public float constraint;
     Rigidbody rb;
     float currentSpeed;
@@ -29,7 +30,10 @@ public class PlayerController : MonoBehaviour
         currentSpeed = speed;
         carriedCount = 0;
     }
-
+    void Update()
+    {
+        Fire();
+    }
     void FixedUpdate()
     {
         Movement();
@@ -90,12 +94,20 @@ public class PlayerController : MonoBehaviour
 
     private void Fire()
     {
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            GameObject debris = Instantiate(this.debris, transform.position, transform.rotation);
+            debris.GetComponent<Orbiting>().planet = planet.transform;
+            debris.GetComponent<Orbiting>().fireAngle = transform.eulerAngles.z;
+            Debug.Log(transform.rotation.z);
+        }
         if (carriedCount <= 0)
         {
             return;
         }
 
-        // Shoot out the object
+
     }
 
     void LateUpdate()

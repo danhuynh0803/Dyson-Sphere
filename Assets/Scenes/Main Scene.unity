@@ -302,7 +302,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 266387805}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -5}
+  m_LocalPosition: {x: 0, y: 0, z: -5.1}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
@@ -320,10 +320,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47ad45408b508fc32a39c9c6b8b1e8e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 25
-  torque: 50
+  speed: 15
+  torque: 75
   planet: {fileID: 1648348516}
-  constraint: 5
+  suctionAngle: 50
+  debris: {fileID: 8124315028817147099, guid: 11ef156d918b4bb41a0990eafd479156, type: 3}
+  constraint: 5.1
+  maxCarriedCount: 3
+  decreaseSpeedAmount: 1.5
 --- !u!54 &266387811
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -512,7 +516,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 787563061}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &787563064
 Camera:
   m_ObjectHideFlags: 0
