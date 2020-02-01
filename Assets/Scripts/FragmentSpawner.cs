@@ -22,7 +22,7 @@ public class FragmentSpawner : MonoBehaviour
 
     void Start()
     {
-        spawnTimer = Random.Range(spawnDelayMin, spawnDelayMax);
+        spawnTimer = spawnDelayMin;
     }
 
     void Update()

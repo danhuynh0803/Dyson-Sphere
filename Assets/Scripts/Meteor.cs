@@ -15,6 +15,8 @@ public class Meteor: MonoBehaviour
     // Meteor travel towards planet
     void Start()
     {
+        // TODO: play metero streaking sound
+
         if (planetTransform == null)
         {
             // Automatically find the planet object in scene
