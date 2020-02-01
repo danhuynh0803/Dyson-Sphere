@@ -12,13 +12,14 @@ public class Bob : MonoBehaviour
 
     void Start()
     {
-        posOffset = transform.position;
+        
     }
 
     void Update()
     {
+        posOffset = transform.position;
         tempPos = posOffset;
-        tempPos.y += Mathf.Sin(Time.fixedTime * Mathf.PI * frequency) * amplitude;
+        tempPos.z += Mathf.Sin(Time.fixedTime * Mathf.PI * frequency) * amplitude;
 
         transform.position = tempPos;
     }
