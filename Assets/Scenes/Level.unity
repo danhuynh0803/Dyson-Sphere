@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 0ffaa0b7117ba8c47a9d05ae701d4b4d, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 617d9be015db68348a623b01ea51a8c5, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -2380,6 +2380,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a632733263f302744a0a39fea8bc02d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerNumber: 0
   radius: 45
   translateSpeed: 180
   rotateSpeed: 360
@@ -8552,6 +8553,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a632733263f302744a0a39fea8bc02d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerNumber: 0
   radius: 22.3
   translateSpeed: 180
   rotateSpeed: 360
@@ -11465,6 +11467,7 @@ GameObject:
   - component: {fileID: 1452729865}
   - component: {fileID: 1452729864}
   - component: {fileID: 1452729863}
+  - component: {fileID: 1452729867}
   m_Layer: 0
   m_Name: Camera2
   m_TagString: MainCamera
@@ -11568,6 +11571,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1452729867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1452729862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a632733263f302744a0a39fea8bc02d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerNumber: 1
+  radius: 45
+  translateSpeed: 180
+  rotateSpeed: 360
+  isCamera: 1
 --- !u!43 &1456773468
 Mesh:
   m_ObjectHideFlags: 0
@@ -13177,7 +13197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47ad45408b508fc32a39c9c6b8b1e8e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerNumber: 0
+  playerNumber: 1
   speed: 5
   torque: 60
   planet: {fileID: 387329138}
@@ -13198,6 +13218,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a632733263f302744a0a39fea8bc02d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerNumber: 1
   radius: 22.3
   translateSpeed: 180
   rotateSpeed: 360
@@ -17622,6 +17643,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1380806227337772209, guid: 72f01bb674869784484890e10c9ff2c2,
+        type: 3}
+      propertyPath: playerNumber
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1380806227337772222, guid: 72f01bb674869784484890e10c9ff2c2,
         type: 3}
       propertyPath: planet
@@ -17630,7 +17656,7 @@ PrefabInstance:
     - target: {fileID: 1380806227337772222, guid: 72f01bb674869784484890e10c9ff2c2,
         type: 3}
       propertyPath: playerNumber
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7346815948222985030, guid: 72f01bb674869784484890e10c9ff2c2,
         type: 3}

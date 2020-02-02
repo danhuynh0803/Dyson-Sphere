@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class RotationalMovement: MonoBehaviour
 {
+    public Player playerNumber;
     public float radius = 0.6f;
     public float translateSpeed = 180.0f;
     public float rotateSpeed = 360.0f;
@@ -15,17 +16,32 @@ public class RotationalMovement: MonoBehaviour
     void Update()
     {
         direction = new Vector3(Mathf.Sin(angle), Mathf.Cos(angle));
-        // Rotate with left/right arrows
-        if (Input.GetKey(KeyCode.LeftArrow)) Rotate(rotateSpeed);
-        if (Input.GetKey(KeyCode.RightArrow)) Rotate(-rotateSpeed);
+        if (playerNumber == Player.P1)
+        {
+            // Rotate with left/right arrows
+            if (Input.GetKey(KeyCode.A)) Rotate(rotateSpeed);
+            if (Input.GetKey(KeyCode.D)) Rotate(-rotateSpeed);
 
-        // Translate forward/backward with up/down arrows
-        if (Input.GetKey(KeyCode.UpArrow)) Translate(0, translateSpeed);
-        if (Input.GetKey(KeyCode.DownArrow)) Translate(0, -translateSpeed);
+            // Translate forward/backward with up/down arrows
+            if (Input.GetKey(KeyCode.W)) Translate(0, translateSpeed);
+            if (Input.GetKey(KeyCode.S)) Translate(0, -translateSpeed);
 
-        // Translate left/right with A/D. Bad keys but quick test.
-        if (Input.GetKey(KeyCode.A)) Translate(translateSpeed, 0);
-        if (Input.GetKey(KeyCode.D)) Translate(-translateSpeed, 0);
+            // Translate left/right with A/D. Bad keys but quick test.
+            //if (Input.GetKey(KeyCode.A)) Translate(translateSpeed, 0);
+            //if (Input.GetKey(KeyCode.D)) Translate(-translateSpeed, 0);
+        }
+        else
+        {
+            float x = Input.GetAxisRaw("Horizontal");
+            float y = Input.GetAxisRaw("Vertical");
+
+            if (x < 0) Rotate(rotateSpeed);
+            if (x > 0) Rotate(-rotateSpeed);
+
+            // Translate forward/backward with up/down arrows
+            if (y > 0) Translate(0, translateSpeed);
+            if (y < 0) Translate(0, -translateSpeed);
+        }
 
         UpdatePositionRotation();
     }
