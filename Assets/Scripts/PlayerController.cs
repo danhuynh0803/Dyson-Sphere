@@ -41,6 +41,7 @@ public class PlayerController : MonoBehaviour
     }
     void Update()
     {
+        Collect();
         Fire();
     }
     void FixedUpdate()
@@ -51,7 +52,6 @@ public class PlayerController : MonoBehaviour
     private void Movement()
     {
         OrientBody();
-
         if (Input.GetKey(KeyCode.LeftShift))
         {
             currentSpeed = 2 * speed;
@@ -92,7 +92,10 @@ public class PlayerController : MonoBehaviour
         // Suck up objects in a cone shape in front of the player
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            // TODO Make it so that this plays only when we hold down space
             Debug.Log("SUCC");
+            int random = Random.Range(0, 4);
+            SoundController.Play(random, 0.1f);
             carriedCount++;
         }
     }
