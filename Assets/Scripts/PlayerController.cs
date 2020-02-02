@@ -155,7 +155,7 @@ public class PlayerController : MonoBehaviour
         if ( (Input.GetKeyDown(KeyCode.Q) && playerNumber == Player.P1) ||
              (Input.GetKeyDown("joystick 1 button 1") && playerNumber == Player.P2) )
         {
-            SoundController.Play(8, 0.1f);
+            SoundController.Play(6, 0.1f);
             GameObject debris = Instantiate(this.debris, transform.position, transform.rotation);
             debris.GetComponent<Orbiting>().planet = planet.transform;
             debris.GetComponent<Orbiting>().controllingPlayer = playerNumber;
@@ -167,10 +167,10 @@ public class PlayerController : MonoBehaviour
 
     void LateUpdate()
     {
-        if (Vector3.Distance(transform.position, planet.transform.position) > constraint)
-        {
-            transform.position = constraint * (transform.position - planet.transform.position).normalized;
-        }
+//        if (Vector3.Distance(transform.position, planet.transform.position) > constraint || Vector3.Distance(transform.position, planet.transform.position) < constraint)
+//        {
+//            transform.position = constraint * (transform.position - planet.transform.position).normalized;
+//        }
     }
 
     void OnTriggerEnter(Collider other)
