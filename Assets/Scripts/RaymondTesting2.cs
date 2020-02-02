@@ -15,12 +15,17 @@ public class RaymondTesting2 : MonoBehaviour
     void Update()
     {
         direction = new Vector3(Mathf.Sin(angle), Mathf.Cos(angle));
-        // Rotate with left/right arrows
-        if (Input.GetAxis("HorizontalJoystick") > 0 || Input.GetAxis("HorizontalJoystick") < 0) Rotate(Input.GetAxis("HorizontalJoystick") / Mathf.Abs(Input.GetAxis("HorizontalJoystick")) * rotateSpeed);
+
+        float x = Input.GetAxisRaw("Horizontal");
+        float y = Input.GetAxisRaw("Vertical");
+        Debug.Log("x :" + x);
+        Debug.Log("y :" + y);
+        if (x < 0) Rotate(rotateSpeed);
+        if (x > 0) Rotate(-rotateSpeed);
 
         // Translate forward/backward with up/down arrows
-        
-        if (Input.GetAxis("VerticalJoystick") > 0 || Input.GetAxis("VerticalJoystick") < 0) Translate(0, Input.GetAxis("VerticalJoystick")/ Mathf.Abs(Input.GetAxis("VerticalJoystick")) * translateSpeed);
+        if (y > 0) Translate(0, translateSpeed);
+        if (y < 0) Translate(0, -translateSpeed);
 
         UpdatePositionRotation();
     }
