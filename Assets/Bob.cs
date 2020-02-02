@@ -25,6 +25,7 @@ public class Bob : MonoBehaviour
         if (isSprite)
         {
             tempPos.y += Mathf.Sin(Time.fixedTime * Mathf.PI * frequency) * amplitude;
+            tempPos.z = 0.0f;
         }
 
         transform.position = tempPos;
