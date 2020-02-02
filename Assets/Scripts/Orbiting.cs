@@ -7,15 +7,15 @@ public class Orbiting : MonoBehaviour {
     public float speed;
     public float constraint;
     public Transform planet;
-    public float fireAngle;
+    //public float fireAngle;
     Rigidbody rb;
-
+    public Transform vaccum;
     public Player controllingPlayer;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        rb.AddForce(new Vector3(speed * Mathf.Cos((fireAngle + 90f) * Mathf.Deg2Rad), speed * Mathf.Sin((fireAngle + 90f) * Mathf.Deg2Rad) , 0f), ForceMode.VelocityChange);
+        rb.AddForce(speed * (vaccum.transform.forward * -1), ForceMode.VelocityChange);
     }
 
     void FixedUpdate()

@@ -111,6 +111,7 @@ MonoBehaviour:
   constraint: 21.5
   planet: {fileID: 0}
   fireAngle: 0
+  vaccum: {fileID: 0}
   controllingPlayer: 2
 --- !u!54 &1658648202591038274
 Rigidbody:

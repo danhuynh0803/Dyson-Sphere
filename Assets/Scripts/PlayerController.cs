@@ -157,8 +157,8 @@ public class PlayerController : MonoBehaviour
         {
             GameObject debris = Instantiate(this.debris, transform.position, transform.rotation);
             debris.GetComponent<Orbiting>().planet = planet.transform;
-            debris.GetComponent<Orbiting>().fireAngle = transform.eulerAngles.z;
             debris.GetComponent<Orbiting>().controllingPlayer = playerNumber;
+            debris.GetComponent<Orbiting>().vaccum = transform;
             //Debug.Log(transform.rotation.z);
             carriedCount--;
         }
