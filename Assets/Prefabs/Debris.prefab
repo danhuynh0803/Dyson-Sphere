@@ -107,7 +107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9cfafa6ac054394ba3f0ef796764e68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 40
+  speed: 45
   constraint: 21
   planet: {fileID: 0}
   vaccum: {fileID: 0}

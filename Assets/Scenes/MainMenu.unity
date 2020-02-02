@@ -1868,7 +1868,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 2.2, y: 170}
+  m_AnchoredPosition: {x: 2.2, y: 135}
   m_SizeDelta: {x: 291.2, y: 449.8}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &939730910
@@ -1904,7 +1904,21 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Red:
 
-    Blue:'
+    Q = Suck
+
+    E= Shoot
+
+    WASD = Move
+
+
+    Blue:
+
+    A =
+    Suck
+
+    B = Shoot
+
+    JoyStiq = move'
 --- !u!222 &939730911
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2594,8 +2608,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "LeGav & MyAlias \n- Coders\nLovelyMango -         \nSound\nJTQuach -\n
-    Art\nEstateDog-\nJackOfAllTrades\nGlazey-\nActive Participant\n"
+  m_Text: "LeGav & MyAlias \n- Coders\nLovelyMango -         \nSound\nJTQuach -\nArt\nEstateDog-\nJackOfAllTrades\nGlazey-\nActive
+    Participant\n"
 --- !u!222 &1630138452
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2996,7 +3010,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46d68847d4721be4183a7a5341a17906, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amplitude: 0.32
+  amplitude: 0.3
   frequency: 2.1
   isSprite: 1
 --- !u!1 &2064851024
