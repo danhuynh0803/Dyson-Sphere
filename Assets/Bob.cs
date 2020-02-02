@@ -6,6 +6,7 @@ public class Bob : MonoBehaviour
 {
     public float amplitude;
     public float frequency;
+    public bool isSprite;
 
     Vector3 posOffset = new Vector3();
     Vector3 tempPos = new Vector3();
@@ -20,6 +21,11 @@ public class Bob : MonoBehaviour
         posOffset = transform.position;
         tempPos = posOffset;
         tempPos.z += Mathf.Sin(Time.fixedTime * Mathf.PI * frequency) * amplitude;
+
+        if (isSprite)
+        {
+            tempPos.y += Mathf.Sin(Time.fixedTime * Mathf.PI * frequency) * amplitude;
+        }
 
         transform.position = tempPos;
     }
