@@ -27,7 +27,7 @@ public class Orbiting : MonoBehaviour {
 
     void LateUpdate()
     {
-        if (Vector3.Distance(transform.position, planet.transform.position) > constraint)
+        if (Vector3.Distance(transform.position, planet.transform.position) > constraint || Vector3.Distance(transform.position, planet.transform.position) < constraint)
         {
             transform.position = constraint * (transform.position - planet.transform.position).normalized;
         }

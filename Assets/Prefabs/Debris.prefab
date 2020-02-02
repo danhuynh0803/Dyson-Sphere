@@ -107,10 +107,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9cfafa6ac054394ba3f0ef796764e68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 25
-  constraint: 21.5
+  speed: 40
+  constraint: 21
   planet: {fileID: 0}
-  fireAngle: 0
   vaccum: {fileID: 0}
   controllingPlayer: 2
 --- !u!54 &1658648202591038274
