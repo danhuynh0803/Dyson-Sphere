@@ -342,7 +342,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-183956
+  m_Name: pb_Mesh-31278
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1320,7 +1320,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-184020
+  m_Name: pb_Mesh-31280
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1483,7 +1483,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-183996
+  m_Name: pb_Mesh-31296
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2382,8 +2382,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerNumber: 0
   radius: 45
-  translateSpeed: 180
-  rotateSpeed: 360
+  translateSpeed: 90
+  rotateSpeed: 180
   isCamera: 1
 --- !u!43 &345605124
 Mesh:
@@ -4038,7 +4038,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-184032
+  m_Name: pb_Mesh-31290
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4789,7 +4789,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-183932
+  m_Name: pb_Mesh-31298
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6093,7 +6093,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-184074
+  m_Name: pb_Mesh-31282
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -9465,7 +9465,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-183968
+  m_Name: pb_Mesh-31294
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -11585,8 +11585,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerNumber: 1
   radius: 45
-  translateSpeed: 180
-  rotateSpeed: 360
+  translateSpeed: 90
+  rotateSpeed: 180
   isCamera: 1
 --- !u!43 &1456773468
 Mesh:
@@ -12409,7 +12409,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-183912
+  m_Name: pb_Mesh-31284
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -12757,7 +12757,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-184008
+  m_Name: pb_Mesh-31302
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -13220,8 +13220,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerNumber: 1
   radius: 22.3
-  translateSpeed: 180
-  rotateSpeed: 360
+  translateSpeed: 90
+  rotateSpeed: 180
   isCamera: 0
 --- !u!54 &1642558349
 Rigidbody:
@@ -14604,7 +14604,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-183984
+  m_Name: pb_Mesh-31286
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -15105,7 +15105,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-184046
+  m_Name: pb_Mesh-31292
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -15667,7 +15667,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-183944
+  m_Name: pb_Mesh-31300
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -17300,7 +17300,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-184060
+  m_Name: pb_Mesh-31276
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -17647,6 +17647,16 @@ PrefabInstance:
         type: 3}
       propertyPath: playerNumber
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1380806227337772209, guid: 72f01bb674869784484890e10c9ff2c2,
+        type: 3}
+      propertyPath: translateSpeed
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1380806227337772209, guid: 72f01bb674869784484890e10c9ff2c2,
+        type: 3}
+      propertyPath: rotateSpeed
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 1380806227337772222, guid: 72f01bb674869784484890e10c9ff2c2,
         type: 3}
