@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour
 
     public float maxCarriedCount = 3;
     public float decreaseSpeedAmount = 1.5f;
-    public float suckDistance = 10f;
+    public float suckDistance = 8.0f;
     private int carriedCount;
 
     private Animator anim;
@@ -136,8 +136,8 @@ public class PlayerController : MonoBehaviour
         // Absorb
 
         // Suck up objects in a cone shape in front of the player
-        if ( (Input.GetKeyDown(KeyCode.Space) && playerNumber == Player.P1) ||
-             (Input.GetKeyDown("joystick 1 button 0") && playerNumber == Player.P2) )
+        if ( (Input.GetKeyDown(KeyCode.Q) && playerNumber == Player.P1) ||
+              (Input.GetKeyDown("joystick 1 button 0") && playerNumber == Player.P2) )
         {
             // TODO Make it so that this plays only when we hold down space
             int random = Random.Range(0, 4);
@@ -159,11 +159,11 @@ public class PlayerController : MonoBehaviour
 
     private void Fire()
     {
-        //if (carriedCount <= 0)
-        //{
-        //    return;
-        //}
-        if ( (Input.GetKeyDown(KeyCode.Q) && playerNumber == Player.P1) ||
+        if (carriedCount <= 0)
+        {
+            return;
+        }
+        if ( (Input.GetKeyDown(KeyCode.E) && playerNumber == Player.P1) ||
              (Input.GetKeyDown("joystick 1 button 1") && playerNumber == Player.P2) )
         {
             SoundController.Play(6, 0.1f);
