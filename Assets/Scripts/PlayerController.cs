@@ -35,7 +35,7 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        //rb = GetComponent<Rigidbody>();
         currentSpeed = speed;
         carriedCount = 0;
     }
@@ -48,14 +48,14 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (playerNumber == Player.P1)
-        {
-            Movement();
-        }
-        else if (playerNumber == Player.P2)
-        {
-            MovementJoystick();
-        }
+//        if (playerNumber == Player.P1)
+//        {
+//            Movement();
+//        }
+//        else if (playerNumber == Player.P2)
+//        {
+//            MovementJoystick();
+//        }
     }
 
     private void MovementJoystick()
@@ -85,6 +85,7 @@ public class PlayerController : MonoBehaviour
     }
 
 
+    // TODO refactor/remove
     private void Movement()
     {
         OrientBody();
@@ -143,10 +144,10 @@ public class PlayerController : MonoBehaviour
 
     private void Fire()
     {
-        if (carriedCount <= 0)
-        {
-            return;
-        }
+        //if (carriedCount <= 0)
+        //{
+        //    return;
+        //}
 
         if (Input.GetKeyDown(KeyCode.Q))
         {
