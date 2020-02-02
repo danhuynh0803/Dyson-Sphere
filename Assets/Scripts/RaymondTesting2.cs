@@ -16,7 +16,7 @@ public class RaymondTesting2 : MonoBehaviour
     {
         direction = new Vector3(Mathf.Sin(angle), Mathf.Cos(angle));
         // Rotate with left/right arrows
-        if (Input.GetAxis("HorizontalJoystick") > 0 || Input.GetAxis("HorizontalJoystick") < 0) Rotate(Input.GetAxis("HorizontalJoystick")/ Mathf.Abs(Input.GetAxis("HorizontalJoystick")) * rotateSpeed);
+        if (Input.GetAxis("HorizontalJoystick") > 0 || Input.GetAxis("HorizontalJoystick") < 0) Rotate(Input.GetAxis("HorizontalJoystick") / Mathf.Abs(Input.GetAxis("HorizontalJoystick")) * rotateSpeed);
 
         // Translate forward/backward with up/down arrows
         

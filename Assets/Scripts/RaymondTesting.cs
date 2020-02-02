@@ -22,7 +22,7 @@ public class RaymondTesting : MonoBehaviour
 
         // Translate forward/backward with up/down arrows
         if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W)) Translate(0, translateSpeed);
-        if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))) Translate(0, -translateSpeed);
+        if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S)) Translate(0, -translateSpeed);
 
         UpdatePositionRotation();
     }
