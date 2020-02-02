@@ -11,11 +11,13 @@ public class Orbiting : MonoBehaviour {
     Rigidbody rb;
     public Transform vaccum;
     public Player controllingPlayer;
+    public float destroyTimer = 5.0f;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         rb.AddForce(speed * (vaccum.transform.forward * -1), ForceMode.VelocityChange);
+        Destroy(gameObject, destroyTimer);
     }
 
     void FixedUpdate()

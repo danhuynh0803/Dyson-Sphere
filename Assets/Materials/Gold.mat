@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Gold
-  m_Shader: {fileID: 4800000, guid: 4eb20d65b3484791a9d5bf34012cc238, type: 3}
+  m_Shader: {fileID: 4800000, guid: 0c04e1989e9ec5af09725e5b8f6a53e5, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -94,8 +94,9 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 0.8666667, g: 0.82874167, b: 0.0039215684, a: 1}
-    - _Color: {r: 0.4528302, g: 0.4528302, b: 0.4528302, a: 1}
+    - _Color: {r: 1, g: 0.65059197, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _GlowColor: {r: 1, g: 1, b: 1, a: 1}
     - _RimColor: {r: 1, g: 1, b: 1, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _SpecularColor: {r: 0.9, g: 0.9, b: 0.9, a: 1}

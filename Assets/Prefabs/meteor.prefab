@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 6942984051324795783}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.46919194, y: 5, z: -16}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -93,7 +93,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.6
+  m_Radius: 0.25
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &1333877569269278298
 Rigidbody:
@@ -123,7 +123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 967264e7b64f5187883e3ab3598c6363, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
+  speed: 10
   planetTransform: {fileID: 0}
   fragment: {fileID: 1843625056534629311, guid: e2fcdc679c54ba4c585ba08bcd8615d8,
     type: 3}
