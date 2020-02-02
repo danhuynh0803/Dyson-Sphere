@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
     public float speed = 25.0f;
     public float torque = 60.0f;
     public GameObject planet;
-
+    public Transform hose;
     [Header("Vacuum parameters")]
     public float suctionAngle = 50;
 
@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviour
 
     public float maxCarriedCount = 3;
     public float decreaseSpeedAmount = 1.5f;
+    public float suckDistance = 5f;
     private int carriedCount;
 
     private Animator anim;
@@ -142,16 +143,26 @@ public class PlayerController : MonoBehaviour
             int random = Random.Range(0, 4);
             anim.SetTrigger("Suck"); 
             SoundController.Play(random, 0.1f);
-            carriedCount++;
+            GameObject[] fragments = GameObject.FindGameObjectsWithTag("Fragment");
+            Debug.Log(fragments.Length);
+            foreach (var fragment in fragments)
+            {
+                Debug.Log(Vector3.Distance(hose.position, fragment.transform.position));
+                if (Vector3.Distance(hose.position, fragment.transform.position) <= suckDistance)
+                {
+                    carriedCount++;
+                    Destroy(fragment);
+                }
+            }
         }
     }
 
     private void Fire()
     {
-        //if (carriedCount <= 0)
-        //{
-        //    return;
-        //}
+        if (carriedCount <= 0)
+        {
+            return;
+        }
         if ( (Input.GetKeyDown(KeyCode.Q) && playerNumber == Player.P1) ||
              (Input.GetKeyDown("joystick 1 button 1") && playerNumber == Player.P2) )
         {
