@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class House : MonoBehaviour
 {
@@ -12,6 +13,10 @@ public class House : MonoBehaviour
     private int redPoint = 0;
     private int bluePoint = 0;
 
+    [Header("Player point images")]
+    public Image redBar, blueBar;
+
+    [Header("Camera stuff for win panel")]
     public GameObject cameraOne;
     public GameObject cameraTwo;
     public GameObject cameraThree;
@@ -41,6 +46,10 @@ public class House : MonoBehaviour
             // TODO maybe make a win panel instead
             GameController.instance.isGameOver = true;
         }*/
+
+        // Update player fill bars
+        redBar.fillAmount = (float)redPoint / (float)maxScore;
+        blueBar.fillAmount = (float)bluePoint / (float)maxScore;
     }
 
     void OnTriggerEnter(Collider other)
