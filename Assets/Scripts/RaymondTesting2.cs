@@ -18,8 +18,6 @@ public class RaymondTesting2 : MonoBehaviour
 
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
-        Debug.Log("x :" + x);
-        Debug.Log("y :" + y);
         if (x < 0) Rotate(rotateSpeed);
         if (x > 0) Rotate(-rotateSpeed);
 
