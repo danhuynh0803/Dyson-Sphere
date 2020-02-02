@@ -60,6 +60,7 @@ public class House : MonoBehaviour
             Destroy(other.gameObject);
             houseProgressionModels[currScore].SetActive(true);
 
+            SoundController.Play(5, 0.1f); //play point noise
             currScore++;
 
             if (currScore >= maxScore)

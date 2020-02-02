@@ -20,12 +20,16 @@ public class Bob : MonoBehaviour
     {
         posOffset = transform.position;
         tempPos = posOffset;
-        tempPos.z += Mathf.Sin(Time.fixedTime * Mathf.PI * frequency) * amplitude;
+
+        if (!isSprite)
+        {
+            tempPos.z += Mathf.Sin(Time.fixedTime * Mathf.PI * frequency) * amplitude;
+        }
+        
 
         if (isSprite)
         {
             tempPos.y += Mathf.Sin(Time.fixedTime * Mathf.PI * frequency) * amplitude;
-            tempPos.z = 0.0f;
         }
 
         transform.position = tempPos;
