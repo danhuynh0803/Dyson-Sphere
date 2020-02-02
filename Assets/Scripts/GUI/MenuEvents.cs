@@ -40,7 +40,7 @@ public class MenuEvents : MonoBehaviour
     }
 
     private void Update()
-    {        
+    {
         //if (Input.GetKeyDown(KeyCode.Escape) && PauseMenu != null)
         //{
         //    if (isGamePaused)
@@ -52,6 +52,10 @@ public class MenuEvents : MonoBehaviour
         //        Pause();
         //    }
         //}
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            SceneManager.LoadScene(0);
+        }
     }
 
     IEnumerator ChangeScene(string sceneName)
@@ -116,4 +120,6 @@ public class MenuEvents : MonoBehaviour
     {
         StartCoroutine(ChangeScene(sceneName));
     }
+
+
 }
