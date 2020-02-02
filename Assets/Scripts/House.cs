@@ -19,10 +19,17 @@ public class House : MonoBehaviour
     public GameObject playerBlue;
     public GameObject redWins;
     public GameObject blueWins;
+    public GameObject blueWinner;
+    public GameObject redWinner;
 
     void Start()
     {
         currScore = 0;
+        cameraThree.SetActive(false);
+        redWins.SetActive(false);
+        redWinner.SetActive(false);
+        blueWins.SetActive(false);
+        blueWinner.SetActive(false);
     }
 
     // Update is called once per frame
@@ -79,10 +86,12 @@ public class House : MonoBehaviour
         if (redPoint > bluePoint)
         {
             redWins.SetActive(true);
+            redWinner.SetActive(true);
         }
         else
         {
             blueWins.SetActive(true);
+            blueWinner.SetActive(true);
         }
 
     }
