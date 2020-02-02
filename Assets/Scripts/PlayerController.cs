@@ -132,10 +132,10 @@ public class PlayerController : MonoBehaviour
         // Absorb
 
         // Suck up objects in a cone shape in front of the player
-        if (Input.GetKeyDown(KeyCode.Space))
+        if ( (Input.GetKeyDown(KeyCode.Space) && playerNumber == Player.P1) ||
+             (Input.GetKeyDown("joystick 1 button 0") && playerNumber == Player.P2) )
         {
             // TODO Make it so that this plays only when we hold down space
-            Debug.Log("SUCC");
             int random = Random.Range(0, 4);
             SoundController.Play(random, 0.1f);
             carriedCount++;
@@ -148,8 +148,8 @@ public class PlayerController : MonoBehaviour
         //{
         //    return;
         //}
-
-        if (Input.GetKeyDown(KeyCode.Q))
+        if ( (Input.GetKeyDown(KeyCode.Q) && playerNumber == Player.P1) ||
+             (Input.GetKeyDown("joystick 1 button 1") && playerNumber == Player.P2) )
         {
             GameObject debris = Instantiate(this.debris, transform.position, transform.rotation);
             debris.GetComponent<Orbiting>().planet = planet.transform;
@@ -158,7 +158,6 @@ public class PlayerController : MonoBehaviour
             //Debug.Log(transform.rotation.z);
             carriedCount--;
         }
-
     }
 
     void LateUpdate()
