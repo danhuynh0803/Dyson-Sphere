@@ -33,11 +33,14 @@ public class PlayerController : MonoBehaviour
     public float decreaseSpeedAmount = 1.5f;
     private int carriedCount;
 
+    private Animator anim;
+
     void Start()
     {
         //rb = GetComponent<Rigidbody>();
         currentSpeed = speed;
         carriedCount = 0;
+        anim = gameObject.GetComponent<Animator>();
     }
 
     void Update()
@@ -137,6 +140,7 @@ public class PlayerController : MonoBehaviour
         {
             // TODO Make it so that this plays only when we hold down space
             int random = Random.Range(0, 4);
+            anim.SetTrigger("Suck"); 
             SoundController.Play(random, 0.1f);
             carriedCount++;
         }
