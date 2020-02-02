@@ -1903,7 +1903,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &246510108
 Transform:
   m_ObjectHideFlags: 0
@@ -2558,6 +2558,11 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1027900248}
+    - target: {fileID: 7346815948233082467, guid: 72f01bb674869784484890e10c9ff2c2,
+        type: 3}
+      propertyPath: m_Name
+      value: Eye1
+      objectReference: {fileID: 0}
     - target: {fileID: 7346815948233082468, guid: 72f01bb674869784484890e10c9ff2c2,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -2808,6 +2813,11 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 563831069}
+    - target: {fileID: 7346815948816919529, guid: 72f01bb674869784484890e10c9ff2c2,
+        type: 3}
+      propertyPath: m_Name
+      value: Pupil2
+      objectReference: {fileID: 0}
     - target: {fileID: 7346815948816919530, guid: 72f01bb674869784484890e10c9ff2c2,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -2888,6 +2898,11 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1411112082}
+    - target: {fileID: 7346815949412949946, guid: 72f01bb674869784484890e10c9ff2c2,
+        type: 3}
+      propertyPath: m_Name
+      value: Eye2
+      objectReference: {fileID: 0}
     - target: {fileID: 7346815949412949947, guid: 72f01bb674869784484890e10c9ff2c2,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -3128,6 +3143,11 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1543638501}
+    - target: {fileID: 7346815950193931331, guid: 72f01bb674869784484890e10c9ff2c2,
+        type: 3}
+      propertyPath: m_Name
+      value: Pupil1
+      objectReference: {fileID: 0}
     - target: {fileID: 7346815950193931332, guid: 72f01bb674869784484890e10c9ff2c2,
         type: 3}
       propertyPath: m_LocalRotation.x
