@@ -29,7 +29,9 @@ public class GameController : MonoBehaviour
     {
          if (isGameOver)
          {
-            MenuEvents.instance.LoadScene("WinScene");
+            //enuEvents.instance.LoadScene("WinScene");
+            // TODO transition to win. Have the camera zoom in on the finished building
+            // Display either player1 or p2's vacuum
          }
     }
 

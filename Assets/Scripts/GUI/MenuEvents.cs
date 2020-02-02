@@ -41,17 +41,17 @@ public class MenuEvents : MonoBehaviour
 
     private void Update()
     {        
-        if (Input.GetKeyDown(KeyCode.Escape) && PauseMenu != null)
-        {
-            if (isGamePaused)
-            {
-                Resume();
-            }
-            else
-            {
-                Pause();
-            }
-        }
+        //if (Input.GetKeyDown(KeyCode.Escape) && PauseMenu != null)
+        //{
+        //    if (isGamePaused)
+        //    {
+        //        Resume();
+        //    }
+        //    else
+        //    {
+        //        Pause();
+        //    }
+        //}
     }
 
     IEnumerator ChangeScene(string sceneName)

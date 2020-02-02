@@ -31,11 +31,9 @@ public class House : MonoBehaviour
         // Absorb fragments
         // TODO refactor so that it doesnt need to
         // check that the object was fired
-        if (other.gameObject.GetComponent<Orbiting>() != null)
+        if (other.gameObject.GetComponent<Orbiting>() != null && currScore < maxScore)
         {
-            currScore++;
             // TODO play a construction noise (hammers, saws, etc)
-
             // Add a wall segment and change the color
             Player controllingPlayer = other.gameObject.GetComponent<Orbiting>().controllingPlayer;
             if (controllingPlayer == Player.P1)
@@ -48,8 +46,9 @@ public class House : MonoBehaviour
             }
 
             Destroy(other.gameObject);
-
             houseProgressionModels[currScore].SetActive(true);
+
+            currScore++;
         }
     }
 }

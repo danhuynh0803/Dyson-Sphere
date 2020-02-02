@@ -15,8 +15,8 @@ public class PlayerController : MonoBehaviour
     public Player playerNumber;
 
     [Header("Movement parameters")]
-    public float speed;
-    public float torque;
+    public float speed = 25.0f;
+    public float torque = 60.0f;
     public GameObject planet;
 
     [Header("Vacuum parameters")]
@@ -39,14 +39,50 @@ public class PlayerController : MonoBehaviour
         currentSpeed = speed;
         carriedCount = 0;
     }
+
     void Update()
     {
         Fire();
     }
+
     void FixedUpdate()
     {
-        Movement();
+        if (playerNumber == Player.P1)
+        {
+            Movement();
+        }
+        else if (playerNumber == Player.P2)
+        {
+            MovementJoystick();
+        }
     }
+
+    private void MovementJoystick()
+    {
+        OrientBody();
+
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            currentSpeed = 2 * speed;
+        }
+        else
+        {
+            currentSpeed = speed;
+        }
+
+        // Lower the speed based off of how many objects the player is carrying
+        currentSpeed -= (decreaseSpeedAmount * carriedCount);
+
+        // Tank controls - Move forward/backward on Z-axis
+        float z = Input.GetAxis("VerticalJoystick");
+        transform.Translate(Vector3.forward * z * currentSpeed * Time.fixedDeltaTime);
+
+        // Rotate on Y axis
+        float x = Input.GetAxisRaw("HorizontalJoystick");
+        mRotation.z += -1 * Time.fixedDeltaTime * x * torque;
+        transform.localRotation = Quaternion.Euler(mRotation);
+    }
+
 
     private void Movement()
     {
@@ -70,8 +106,13 @@ public class PlayerController : MonoBehaviour
         transform.Translate(Vector3.forward * z * currentSpeed * Time.fixedDeltaTime);
 
         // Rotate on Y axis
+        Debug.Log("Normal Movement()");
         float x = Input.GetAxisRaw("Horizontal");
+        Debug.Log("x: " + x);
+        Debug.Log("Time.fixedDeltaTime " + Time.fixedDeltaTime);
+        Debug.Log("torque " + torque);
         mRotation.z += -1 * Time.fixedDeltaTime * x * torque;
+        Debug.Log(mRotation.z);
         transform.localRotation = Quaternion.Euler(mRotation);
     }
 
@@ -92,7 +133,7 @@ public class PlayerController : MonoBehaviour
         // Suck up objects in a cone shape in front of the player
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Debug.Log("SUCC");
+            //Debug.Log("SUCC");
             carriedCount++;
         }
     }
@@ -110,7 +151,7 @@ public class PlayerController : MonoBehaviour
             debris.GetComponent<Orbiting>().planet = planet.transform;
             debris.GetComponent<Orbiting>().fireAngle = transform.eulerAngles.z;
             debris.GetComponent<Orbiting>().controllingPlayer = playerNumber;
-            Debug.Log(transform.rotation.z);
+            //Debug.Log(transform.rotation.z);
             carriedCount--;
         }
 
@@ -128,7 +169,7 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.GetComponent<Fragment>())
         {
-            Debug.Log("Carrying fragment!");
+            //Debug.Log("Carrying fragment!");
             carriedCount++;
             Destroy(other.gameObject);
         }
