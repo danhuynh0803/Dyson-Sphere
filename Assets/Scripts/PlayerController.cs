@@ -136,8 +136,8 @@ public class PlayerController : MonoBehaviour
         // Absorb
 
         // Suck up objects in a cone shape in front of the player
-        if ( (Input.GetKeyDown(KeyCode.Space) && playerNumber == Player.P1) ||
-             (Input.GetKeyDown("joystick 1 button 0") && playerNumber == Player.P2) )
+        if ( (Input.GetKeyDown(KeyCode.Q) && playerNumber == Player.P1) ||
+              (Input.GetKeyDown("joystick 1 button 0") && playerNumber == Player.P2) )
         {
             // TODO Make it so that this plays only when we hold down space
             int random = Random.Range(0, 4);
@@ -163,7 +163,7 @@ public class PlayerController : MonoBehaviour
         {
             return;
         }
-        if ( (Input.GetKeyDown(KeyCode.Q) && playerNumber == Player.P1) ||
+        if ( (Input.GetKeyDown(KeyCode.E) && playerNumber == Player.P1) ||
              (Input.GetKeyDown("joystick 1 button 1") && playerNumber == Player.P2) )
         {
             SoundController.Play(6, 0.1f);
