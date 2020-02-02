@@ -159,10 +159,10 @@ public class PlayerController : MonoBehaviour
 
     private void Fire()
     {
-        if (carriedCount <= 0)
-        {
-            return;
-        }
+        //if (carriedCount <= 0)
+        //{
+        //    return;
+        //}
         if ( (Input.GetKeyDown(KeyCode.Q) && playerNumber == Player.P1) ||
              (Input.GetKeyDown("joystick 1 button 1") && playerNumber == Player.P2) )
         {
