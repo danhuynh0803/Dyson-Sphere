@@ -31,7 +31,7 @@ public class PlayerController : MonoBehaviour
 
     public float maxCarriedCount = 3;
     public float decreaseSpeedAmount = 1.5f;
-    public float suckDistance = 8.0f;
+    public float suckDistance = 10.0f;
     private int carriedCount;
 
     private Animator anim;
