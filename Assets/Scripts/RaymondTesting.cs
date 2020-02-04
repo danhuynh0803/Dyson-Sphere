@@ -16,13 +16,15 @@ public class RaymondTesting : MonoBehaviour
     void Update()
     {
         direction = new Vector3(Mathf.Sin(radian), Mathf.Cos(radian));
-        // Rotate with left/right arrows
-        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A)) Rotate(rotateSpeed);
-        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D)) Rotate(-rotateSpeed);
+
+        float x = Input.GetAxisRaw("Horizontal");
+        float y = Input.GetAxisRaw("Vertical");
+        if (x < 0) Rotate(rotateSpeed);
+        if (x > 0) Rotate(-rotateSpeed);
 
         // Translate forward/backward with up/down arrows
-        if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W)) Translate(0, translateSpeed);
-        if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S)) Translate(0, -translateSpeed);
+        if (y > 0) Translate(0, translateSpeed);
+        if (y < 0) Translate(0, -translateSpeed);
 
         UpdatePositionRotation();
     }

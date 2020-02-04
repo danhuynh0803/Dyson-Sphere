@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     public float torque = 60.0f;
     public GameObject planet;
     public Transform hose;
+
     [Header("Vacuum parameters")]
     public float suctionAngle = 50;
 
@@ -62,31 +63,31 @@ public class PlayerController : MonoBehaviour
 //        }
     }
 
-    private void MovementJoystick()
-    {
-        OrientBody();
-
-        if (Input.GetKey(KeyCode.LeftShift))
-        {
-            currentSpeed = 2 * speed;
-        }
-        else
-        {
-            currentSpeed = speed;
-        }
-
-        // Lower the speed based off of how many objects the player is carrying
-        currentSpeed -= (decreaseSpeedAmount * carriedCount);
-
-        // Tank controls - Move forward/backward on Z-axis
-        float z = Input.GetAxis("VerticalJoystick");
-        transform.Translate(Vector3.forward * z * currentSpeed * Time.fixedDeltaTime);
-
-        // Rotate on Y axis
-        float x = Input.GetAxisRaw("HorizontalJoystick");
-        mRotation.z += -1 * Time.fixedDeltaTime * x * torque;
-        transform.localRotation = Quaternion.Euler(mRotation);
-    }
+//    private void MovementJoystick()
+//    {
+//        OrientBody();
+//
+//        if (Input.GetKey(KeyCode.LeftShift))
+//        {
+//            currentSpeed = 2 * speed;
+//        }
+//        else
+//        {
+//            currentSpeed = speed;
+//        }
+//
+//        // Lower the speed based off of how many objects the player is carrying
+//        currentSpeed -= (decreaseSpeedAmount * carriedCount);
+//
+//        // Tank controls - Move forward/backward on Z-axis
+//        float z = Input.GetAxis("VerticalJoystick");
+//        transform.Translate(Vector3.forward * z * currentSpeed * Time.fixedDeltaTime);
+//
+//        // Rotate on Y axis
+//        float x = Input.GetAxisRaw("HorizontalJoystick");
+//        mRotation.z += -1 * Time.fixedDeltaTime * x * torque;
+//        transform.localRotation = Quaternion.Euler(mRotation);
+//    }
 
 
     // TODO refactor/remove
@@ -136,12 +137,12 @@ public class PlayerController : MonoBehaviour
         // Absorb
 
         // Suck up objects in a cone shape in front of the player
-        if ( (Input.GetKeyDown(KeyCode.Q) && playerNumber == Player.P1) ||
-              (Input.GetKeyDown("joystick 1 button 0") && playerNumber == Player.P2) )
+        if ( (Input.GetButtonDown("Collect") && playerNumber == Player.P1) ||
+             (Input.GetButtonDown("Collect2") && playerNumber == Player.P2) )
         {
             // TODO Make it so that this plays only when we hold down space
             int random = Random.Range(0, 4);
-            anim.SetTrigger("Suck"); 
+            anim.SetTrigger("Suck");
             SoundController.Play(random, 0.1f);
             GameObject[] fragments = GameObject.FindGameObjectsWithTag("Fragment");
             Debug.Log(fragments.Length);
@@ -163,8 +164,9 @@ public class PlayerController : MonoBehaviour
         {
             return;
         }
-        if ( (Input.GetKeyDown(KeyCode.E) && playerNumber == Player.P1) ||
-             (Input.GetKeyDown("joystick 1 button 1") && playerNumber == Player.P2) )
+
+        if ( (Input.GetButtonDown("Fire") && playerNumber == Player.P1) ||
+             (Input.GetButtonDown("Fire2") && playerNumber == Player.P2) )
         {
             SoundController.Play(6, 0.1f);
             GameObject debris = Instantiate(this.debris, transform.position, transform.rotation);

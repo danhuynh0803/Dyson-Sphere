@@ -16,8 +16,8 @@ public class RaymondTesting2 : MonoBehaviour
     {
         direction = new Vector3(Mathf.Sin(angle), Mathf.Cos(angle));
 
-        float x = Input.GetAxisRaw("Horizontal");
-        float y = Input.GetAxisRaw("Vertical");
+        float x = Input.GetAxisRaw("Horizontal2");
+        float y = Input.GetAxisRaw("Vertical2");
         if (x < 0) Rotate(rotateSpeed);
         if (x > 0) Rotate(-rotateSpeed);
 

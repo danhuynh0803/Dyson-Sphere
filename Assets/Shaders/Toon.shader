@@ -5,6 +5,7 @@
         _MainTex ("Texture", 2D) = "white" {}
         _Tint ("Tint Color", Color) = (1,1,1,1)
         _Ambient ("Ambient Amount", Range(0, 1)) = 0.2
+        _NoiseTex ("Noise Texture", 2D) = "white" {}
 
         [Specular]
         _SpecularColor ("Specular Color", Color) = (.9,.9,.9,1)
@@ -35,20 +36,24 @@
             {
                 float4 vertex : POSITION;
                 float2 uv : TEXCOORD0;
+                float2 uvNoise : TEXCOORD1;
                 float3 normal : NORMAL;
             };
 
             struct v2f
             {
                 float2 uv : TEXCOORD0;
+                float2 uvNoise : TEXCOORD1;
+                float3 viewDir : TEXCOORD2;
                 UNITY_FOG_COORDS(1)
                 float4 vertex : SV_POSITION;
                 float3 worldNormal : NORMAL;
-                float3 viewDir : TEXCOORD1;
             };
 
             sampler2D _MainTex;
+            sampler2D _NoiseTex;
             float4 _MainTex_ST;
+            float4 _NoiseTex_ST;
             fixed4 _Tint;
             float _Ambient;
 
@@ -65,6 +70,7 @@
                 v2f o;
                 o.vertex = UnityObjectToClipPos(v.vertex);
                 o.uv = TRANSFORM_TEX(v.uv, _MainTex);
+                o.uvNoise = TRANSFORM_TEX(v.uvNoise, _NoiseTex);
                 o.worldNormal = UnityObjectToWorldNormal(v.normal);
                 o.viewDir = WorldSpaceViewDir(v.vertex);
                 UNITY_TRANSFER_FOG(o,o.vertex);
@@ -79,6 +85,9 @@
                 fixed4 albedo = tex2D(_MainTex, i.uv);
                 float3 lightDir = normalize(_WorldSpaceLightPos0.xyz);
                 float NdotL = dot(normal, lightDir);
+
+                fixed4 noise = tex2D(_NoiseTex, i.uvNoise);
+                albedo *= noise;
 
                 // Diffuse
                 float diffuse = max(NdotL, 0.0f);
@@ -98,7 +107,7 @@
                 float rimIntensity = rimDot * pow(NdotL, _RimThreshold);
                 rimIntensity = smoothstep(_RimAmount - 0.01, _RimAmount + 0.01, rimDot);
                 // Dont have rim light on the darkside of the object
-                //rimIntensity = lerp(0.0f, rimIntensity, NdotH);
+                rimIntensity = lerp(0.0f, rimIntensity, NdotH);
                 float4 rim = rimIntensity * _RimColor;
 
                 col = (_Ambient + diffuse + specular + rim) * albedo * _Tint;
