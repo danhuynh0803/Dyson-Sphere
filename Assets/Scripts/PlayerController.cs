@@ -133,6 +133,8 @@ public class PlayerController : MonoBehaviour
 
     private void Collect()
     {
+        if (carriedCount >= maxCarriedCount) { return; }
+
         // Use suction to absorb
         // Absorb
 

@@ -95,7 +95,7 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _Rotation: 11.908904
+    - _Rotation: 0
     - _SrcBlend: 1
     - _SunDisk: 2
     - _SunSize: 0.732
@@ -106,4 +106,4 @@ Material:
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _GroundColor: {r: 0.369, g: 0.349, b: 0.341, a: 1}
     - _SkyTint: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-    - _Tint: {r: 0.11320752, g: 0.10519756, b: 0.10519756, a: 0.5}
+    - _Tint: {r: 0.6792453, g: 0.57992166, b: 0.57992166, a: 0.5}

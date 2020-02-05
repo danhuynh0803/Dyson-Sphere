@@ -121,32 +121,39 @@ public class House : MonoBehaviour
                     blueObjects.Push(houseProgressionModels[currScore]);
                     bluePoint++;
                 }
+
+                houseProgressionModels[currScore].SetActive(true);
+                currScore++;
             }
             else
             {
                 if (controllingPlayer == Player.P1)
                 {
-                    bluePoint--;
-                    redPoint++;
-                    GameObject wall = blueObjects.Pop();
-                    wall.GetComponent<Renderer>().material = p1Color;
-                    redObjects.Push(wall);
+                    if (blueObjects.Count > 0)
+                    {
+                        bluePoint--;
+                        redPoint++;
+                        GameObject wall = blueObjects.Pop();
+                        wall.GetComponent<Renderer>().material = p1Color;
+                        redObjects.Push(wall);
+                    }
                 }
                 else if (controllingPlayer == Player.P2)
                 {
-                    redPoint--;
-                    bluePoint++;
-                    GameObject wall = redObjects.Pop();
-                    wall.GetComponent<Renderer>().material = p2Color;
-                    blueObjects.Push(wall);
+                    if (redObjects.Count > 0)
+                    {
+                        redPoint--;
+                        bluePoint++;
+                        GameObject wall = redObjects.Pop();
+                        wall.GetComponent<Renderer>().material = p2Color;
+                        blueObjects.Push(wall);
+                    }
                 }
             }
 
             Destroy(other.gameObject);
-            houseProgressionModels[currScore].SetActive(true);
 
             SoundController.Play(5, 0.1f); //play point noise
-            currScore++;
 
             if (currScore >= maxScore)
             {
