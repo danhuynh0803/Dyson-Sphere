@@ -17,8 +17,8 @@ class InfoText
 
 public class InfoBoard : MonoBehaviour
 {
-    public Text hudText;         // Text that is displayed for a brief moment
-    public Text conditionalText; // Text that is displayed when a condition is met
+    public Text timedText;         // Text that is displayed for a brief moment
+    public Text displayText;       // Text that is displayed when a condition is met
     public float letterDelay = 0.1f;
 
     #region Singleton
@@ -38,7 +38,7 @@ public class InfoBoard : MonoBehaviour
     private void Start()
     {
         // For testing
-        TestBoard();
+        //TestBoard();
     }
 
     private void TestBoard()
@@ -77,26 +77,26 @@ public class InfoBoard : MonoBehaviour
 
     public void DisplayText(string text)
     {
-        conditionalText.text = text;
+        displayText.text = text;
     }
 
     private IEnumerator DisplayAndWait(InfoText infoText)
     {
         // Clear any old text before display the new text
-        hudText.text = "";
+        timedText.text = "";
         // Display the text letter-by-letter
         isDisplayingText = true;
         foreach (char letter in infoText.text)
         {
             // TODO: play some sound when a new letter is appended
-            hudText.text += letter;
+            timedText.text += letter;
             yield return new WaitForSeconds(letterDelay);
         }
 
         yield return new WaitForSeconds(infoText.timer);
 
         // Clear the text after the specified time
-        hudText.text = "";
+        timedText.text = "";
         isDisplayingText = false;
     }
 }
