@@ -7,6 +7,7 @@ public class House : MonoBehaviour
 {
     public int maxScore = 12;
     public GameObject[] houseProgressionModels;
+    public GameObject chimneyObject; // Serves as the final object
     public Material p1Color, p2Color;
 
     private int currScore = 0;
@@ -27,9 +28,23 @@ public class House : MonoBehaviour
     public GameObject blueWinner;
     public GameObject redWinner;
 
+    [Header("Final round parameters")]
+    public int  finalRoundTimer = 30;
+    private float timer = 0.0f;
+    private bool isFinalRound = false;
+    private bool hasDisplayedFinalRoundText = false;
+    private bool isGameOver = false;
+
+    private Stack<GameObject> redObjects, blueObjects;
+
     void Start()
     {
         currScore = 0;
+        timer = finalRoundTimer;
+
+        redObjects = new Stack<GameObject>();
+        blueObjects = new Stack<GameObject>();
+
         cameraThree.SetActive(false);
         redWins.SetActive(false);
         redWinner.SetActive(false);
@@ -50,6 +65,35 @@ public class House : MonoBehaviour
         // Update player fill bars
         redBar.fillAmount = (float)redPoint / (float)maxScore;
         blueBar.fillAmount = (float)bluePoint / (float)maxScore;
+
+        if (isFinalRound && !isGameOver)
+        {
+            if (!hasDisplayedFinalRoundText)
+            {
+                InfoBoard.instance.AddText("FINAL ROUND!", 1.0f);
+                hasDisplayedFinalRoundText = true;
+            }
+
+            timer -= Time.deltaTime;
+
+            InfoBoard.instance.DisplayText(Mathf.CeilToInt(timer).ToString());
+
+            // Make chimney match color of the current winning player
+            chimneyObject.SetActive(true);
+            if (redPoint > bluePoint)
+            {
+                chimneyObject.GetComponent<Renderer>().material = p1Color;
+            }
+            else
+            {
+                chimneyObject.GetComponent<Renderer>().material = p2Color;
+            }
+
+            if (timer <= 0)
+            {
+                EndGame();
+            }
+        }
     }
 
     void OnTriggerEnter(Collider other)
@@ -57,20 +101,45 @@ public class House : MonoBehaviour
         // Absorb fragments
         // TODO refactor so that it doesnt need to
         // check that the object was fired
-        if (other.gameObject.GetComponent<Orbiting>() != null && currScore < maxScore)
+        if (other.gameObject.GetComponent<Orbiting>() != null)
         {
             // TODO play a construction noise (hammers, saws, etc)
             // Add a wall segment and change the color
             Player controllingPlayer = other.gameObject.GetComponent<Orbiting>().controllingPlayer;
-            if (controllingPlayer == Player.P1)
+
+            if (!isFinalRound)
             {
-                houseProgressionModels[currScore].GetComponent<Renderer>().material = p1Color;
-                redPoint++;
+                if (controllingPlayer == Player.P1)
+                {
+                    houseProgressionModels[currScore].GetComponent<Renderer>().material = p1Color;
+                    redObjects.Push(houseProgressionModels[currScore]);
+                    redPoint++;
+                }
+                else if (controllingPlayer == Player.P2)
+                {
+                    houseProgressionModels[currScore].GetComponent<Renderer>().material = p2Color;
+                    blueObjects.Push(houseProgressionModels[currScore]);
+                    bluePoint++;
+                }
             }
-            else if (controllingPlayer == Player.P2)
+            else
             {
-                houseProgressionModels[currScore].GetComponent<Renderer>().material = p2Color;
-                bluePoint++;
+                if (controllingPlayer == Player.P1)
+                {
+                    bluePoint--;
+                    redPoint++;
+                    GameObject wall = blueObjects.Pop();
+                    wall.GetComponent<Renderer>().material = p1Color;
+                    redObjects.Push(wall);
+                }
+                else if (controllingPlayer == Player.P2)
+                {
+                    redPoint--;
+                    bluePoint++;
+                    GameObject wall = redObjects.Pop();
+                    wall.GetComponent<Renderer>().material = p2Color;
+                    blueObjects.Push(wall);
+                }
             }
 
             Destroy(other.gameObject);
@@ -81,17 +150,23 @@ public class House : MonoBehaviour
 
             if (currScore >= maxScore)
             {
-                EndGame();
+                isFinalRound = true;
             }
         }
     }
-        void EndGame()
+
+    void EndGame()
     {
+        isGameOver = true;
+        // Clear out timer text
+        InfoBoard.instance.DisplayText("");
+
         cameraOne.SetActive(false);
         cameraTwo.SetActive(false);
         cameraThree.SetActive(true);
         playerRed.SetActive(false);
         playerBlue.SetActive(false);
+
         if (redPoint > bluePoint)
         {
             redWins.SetActive(true);

@@ -511,7 +511,11 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/SpookyLevel.unity
   m_Name: pb_Mesh-3800
+=======
+  m_Name: pb_Mesh-6006
+>>>>>>> 4e061316b975fd5a43bacf5bf4e25c43cd20917a:Assets/Scenes/Level.unity
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1326,7 +1330,11 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/SpookyLevel.unity
   m_Name: pb_Mesh-3774
+=======
+  m_Name: pb_Mesh-6008
+>>>>>>> 4e061316b975fd5a43bacf5bf4e25c43cd20917a:Assets/Scenes/Level.unity
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1489,7 +1497,11 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/SpookyLevel.unity
   m_Name: pb_Mesh-4458
+=======
+  m_Name: pb_Mesh-6696
+>>>>>>> 4e061316b975fd5a43bacf5bf4e25c43cd20917a:Assets/Scenes/Level.unity
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1658,7 +1670,11 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/SpookyLevel.unity
   m_Name: pb_Mesh-3832
+=======
+  m_Name: pb_Mesh-6024
+>>>>>>> 4e061316b975fd5a43bacf5bf4e25c43cd20917a:Assets/Scenes/Level.unity
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1866,7 +1882,11 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/SpookyLevel.unity
   m_Name: pb_Mesh-4392
+=======
+  m_Name: pb_Mesh-6630
+>>>>>>> 4e061316b975fd5a43bacf5bf4e25c43cd20917a:Assets/Scenes/Level.unity
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3251,9 +3271,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 338027253}
+<<<<<<< HEAD:Assets/Scenes/SpookyLevel.unity
   m_LocalRotation: {x: -0.9986295, y: -0.000000014700121, z: 0.00000028049533, w: -0.052335896}
   m_LocalPosition: {x: 9.1, y: -22.3, z: 17.6}
   m_LocalScale: {x: 16.666668, y: 16.666668, z: 16.666666}
+=======
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -50}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+>>>>>>> 4e061316b975fd5a43bacf5bf4e25c43cd20917a:Assets/Scenes/Level.unity
   m_Children: []
   m_Father: {fileID: 1642558351}
   m_RootOrder: 1
@@ -3304,7 +3330,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a632733263f302744a0a39fea8bc02d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 45
+  radius: 50
   translateSpeed: 25
   rotateSpeed: 180
   isCamera: 1
@@ -3642,7 +3668,11 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/SpookyLevel.unity
   m_Name: pb_Mesh-3574
+=======
+  m_Name: pb_Mesh-5828
+>>>>>>> 4e061316b975fd5a43bacf5bf4e25c43cd20917a:Assets/Scenes/Level.unity
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4516,7 +4546,7 @@ PrefabInstance:
     - target: {fileID: 2047673139837499436, guid: 6cf18bb1bc242f0f5b98e843477b9271,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2047673139957171911, guid: 6cf18bb1bc242f0f5b98e843477b9271,
         type: 3}
@@ -4693,6 +4723,16 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2047673140804251359, guid: 6cf18bb1bc242f0f5b98e843477b9271,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2047673140804251359, guid: 6cf18bb1bc242f0f5b98e843477b9271,
+        type: 3}
+      propertyPath: m_Name
+      value: Chimney
+      objectReference: {fileID: 0}
     - target: {fileID: 2047673140885308593, guid: 6cf18bb1bc242f0f5b98e843477b9271,
         type: 3}
       propertyPath: m_Mesh
@@ -4827,6 +4867,7 @@ MonoBehaviour:
   - {fileID: 1626922450}
   - {fileID: 1855277845}
   - {fileID: 21422513}
+  chimneyObject: {fileID: 1629982712}
   p1Color: {fileID: 2100000, guid: ac6ed7e7af8528b40bcb61d037765774, type: 2}
   p2Color: {fileID: 2100000, guid: 1ee80c8f336f4074695f99d7b2b0b66e, type: 2}
   redBar: {fileID: 1812072008}
@@ -4840,13 +4881,18 @@ MonoBehaviour:
   blueWins: {fileID: 2079838755}
   blueWinner: {fileID: 572654104}
   redWinner: {fileID: 77966171}
+  finalRoundTimer: 30
 --- !u!43 &458984598
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/SpookyLevel.unity
   m_Name: pb_Mesh-4478
+=======
+  m_Name: pb_Mesh-6732
+>>>>>>> 4e061316b975fd5a43bacf5bf4e25c43cd20917a:Assets/Scenes/Level.unity
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5009,7 +5055,11 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/SpookyLevel.unity
   m_Name: pb_Mesh-4506
+=======
+  m_Name: pb_Mesh-6750
+>>>>>>> 4e061316b975fd5a43bacf5bf4e25c43cd20917a:Assets/Scenes/Level.unity
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5515,7 +5565,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &538258891
 AudioListener:
   m_ObjectHideFlags: 0
@@ -5587,7 +5637,11 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/SpookyLevel.unity
   m_Name: pb_Mesh-3794
+=======
+  m_Name: pb_Mesh-6018
+>>>>>>> 4e061316b975fd5a43bacf5bf4e25c43cd20917a:Assets/Scenes/Level.unity
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6070,43 +6124,12 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!1 &572654104
+--- !u!1 &572654104 stripped
 GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 572654104, guid: f6abbcc22ae1f6e009e7203eea079db5,
+    type: 3}
+  m_PrefabInstance: {fileID: 4408194997158315810}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 572654105}
-  m_Layer: 5
-  m_Name: BlueWinner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &572654105
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 572654104}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.3, y: 2.3, z: 2}
-  m_Children:
-  - {fileID: 1846987140}
-  - {fileID: 2051215506}
-  m_Father: {fileID: 1571162057}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!43 &588579432
 Mesh:
   m_ObjectHideFlags: 0
@@ -6466,7 +6489,11 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/SpookyLevel.unity
   m_Name: pb_Mesh-3834
+=======
+  m_Name: pb_Mesh-6026
+>>>>>>> 4e061316b975fd5a43bacf5bf4e25c43cd20917a:Assets/Scenes/Level.unity
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7281,7 +7308,11 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/SpookyLevel.unity
   m_Name: pb_Mesh-4432
+=======
+  m_Name: pb_Mesh-6670
+>>>>>>> 4e061316b975fd5a43bacf5bf4e25c43cd20917a:Assets/Scenes/Level.unity
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -8106,7 +8137,11 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/SpookyLevel.unity
   m_Name: pb_Mesh-3776
+=======
+  m_Name: pb_Mesh-6010
+>>>>>>> 4e061316b975fd5a43bacf5bf4e25c43cd20917a:Assets/Scenes/Level.unity
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -8263,6 +8298,18 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!114 &850435724 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 850435724, guid: f6abbcc22ae1f6e009e7203eea079db5,
+    type: 3}
+  m_PrefabInstance: {fileID: 4408194997158315810}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!43 &854504913
 Mesh:
   m_ObjectHideFlags: 0
@@ -8768,7 +8815,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-162600
+  m_Name: pb_Mesh-5830
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -9079,7 +9126,11 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/SpookyLevel.unity
   m_Name: pb_Mesh-3554
+=======
+  m_Name: pb_Mesh-5756
+>>>>>>> 4e061316b975fd5a43bacf5bf4e25c43cd20917a:Assets/Scenes/Level.unity
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -9242,7 +9293,11 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/SpookyLevel.unity
   m_Name: pb_Mesh-4500
+=======
+  m_Name: pb_Mesh-6740
+>>>>>>> 4e061316b975fd5a43bacf5bf4e25c43cd20917a:Assets/Scenes/Level.unity
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -9731,7 +9786,11 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/SpookyLevel.unity
   m_Name: pb_Mesh-4416
+=======
+  m_Name: pb_Mesh-6654
+>>>>>>> 4e061316b975fd5a43bacf5bf4e25c43cd20917a:Assets/Scenes/Level.unity
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10426,7 +10485,11 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/SpookyLevel.unity
   m_Name: pb_Mesh-4496
+=======
+  m_Name: pb_Mesh-6728
+>>>>>>> 4e061316b975fd5a43bacf5bf4e25c43cd20917a:Assets/Scenes/Level.unity
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -11251,7 +11314,11 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/SpookyLevel.unity
   m_Name: pb_Mesh-4492
+=======
+  m_Name: pb_Mesh-6720
+>>>>>>> 4e061316b975fd5a43bacf5bf4e25c43cd20917a:Assets/Scenes/Level.unity
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -11448,7 +11515,11 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/SpookyLevel.unity
   m_Name: pb_Mesh-4504
+=======
+  m_Name: pb_Mesh-6748
+>>>>>>> 4e061316b975fd5a43bacf5bf4e25c43cd20917a:Assets/Scenes/Level.unity
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -12832,7 +12903,11 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/SpookyLevel.unity
   m_Name: pb_Mesh-3830
+=======
+  m_Name: pb_Mesh-6022
+>>>>>>> 4e061316b975fd5a43bacf5bf4e25c43cd20917a:Assets/Scenes/Level.unity
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -14188,7 +14263,11 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/SpookyLevel.unity
   m_Name: pb_Mesh19784
+=======
+  m_Name: pb_Mesh21138
+>>>>>>> 4e061316b975fd5a43bacf5bf4e25c43cd20917a:Assets/Scenes/Level.unity
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -15237,9 +15316,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1452729862}
+<<<<<<< HEAD:Assets/Scenes/SpookyLevel.unity
   m_LocalRotation: {x: -0.998971, y: -0, z: -0, w: -0.045353796}
   m_LocalPosition: {x: 24.9, y: -17.1, z: 5.1}
   m_LocalScale: {x: 16.666672, y: 16.666668, z: 16.66667}
+=======
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.47, y: 1, z: -50}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+>>>>>>> 4e061316b975fd5a43bacf5bf4e25c43cd20917a:Assets/Scenes/Level.unity
   m_Children: []
   m_Father: {fileID: 8564924948282568385}
   m_RootOrder: 1
@@ -15256,7 +15341,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c120faa2f8234947804c0a4f101f137, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 45
+  radius: 50
   translateSpeed: 25
   rotateSpeed: 180
   isCamera: 1
@@ -15592,7 +15677,11 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/SpookyLevel.unity
   m_Name: pb_Mesh-3578
+=======
+  m_Name: pb_Mesh-5838
+>>>>>>> 4e061316b975fd5a43bacf5bf4e25c43cd20917a:Assets/Scenes/Level.unity
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -16244,7 +16333,11 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/SpookyLevel.unity
   m_Name: pb_Mesh-3778
+=======
+  m_Name: pb_Mesh-6012
+>>>>>>> 4e061316b975fd5a43bacf5bf4e25c43cd20917a:Assets/Scenes/Level.unity
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -16574,12 +16667,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!224 &1571162057 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 4408194997662245469, guid: f6abbcc22ae1f6e009e7203eea079db5,
-    type: 3}
-  m_PrefabInstance: {fileID: 4408194997158315810}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1573993149 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2047673139359746216, guid: 6cf18bb1bc242f0f5b98e843477b9271,
@@ -16592,7 +16679,11 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/SpookyLevel.unity
   m_Name: pb_Mesh-4498
+=======
+  m_Name: pb_Mesh-6738
+>>>>>>> 4e061316b975fd5a43bacf5bf4e25c43cd20917a:Assets/Scenes/Level.unity
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -16761,7 +16852,11 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/SpookyLevel.unity
   m_Name: pb_Mesh-3798
+=======
+  m_Name: pb_Mesh-6030
+>>>>>>> 4e061316b975fd5a43bacf5bf4e25c43cd20917a:Assets/Scenes/Level.unity
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -17112,6 +17207,12 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &1629982712 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2047673140804251359, guid: 6cf18bb1bc242f0f5b98e843477b9271,
+    type: 3}
+  m_PrefabInstance: {fileID: 458169400}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1642558345
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18902,7 +19003,11 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/SpookyLevel.unity
   m_Name: pb_Mesh-4502
+=======
+  m_Name: pb_Mesh-6746
+>>>>>>> 4e061316b975fd5a43bacf5bf4e25c43cd20917a:Assets/Scenes/Level.unity
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -19065,7 +19170,11 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/SpookyLevel.unity
   m_Name: pb_Mesh-3816
+=======
+  m_Name: pb_Mesh-6014
+>>>>>>> 4e061316b975fd5a43bacf5bf4e25c43cd20917a:Assets/Scenes/Level.unity
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -19409,7 +19518,11 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/SpookyLevel.unity
   m_Name: pb_Mesh-4494
+=======
+  m_Name: pb_Mesh-6726
+>>>>>>> 4e061316b975fd5a43bacf5bf4e25c43cd20917a:Assets/Scenes/Level.unity
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -19566,79 +19679,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!1 &1846987139
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1846987140}
-  - component: {fileID: 1846987142}
-  - component: {fileID: 1846987141}
-  m_Layer: 5
-  m_Name: BlueWin
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1846987140
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1846987139}
-  m_LocalRotation: {x: -0, y: -0, z: 0.17315212, w: 0.9848951}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.9, y: 0.9, z: 0.8}
-  m_Children: []
-  m_Father: {fileID: 572654105}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 19.942001}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -159, y: -69}
-  m_SizeDelta: {x: 950, y: 538}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1846987141
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1846987139}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: fff1854884da85e4dbb05f0420893979, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1846987142
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1846987139}
-  m_CullTransparentMesh: 0
 --- !u!43 &1850293554
 Mesh:
   m_ObjectHideFlags: 0
@@ -19814,7 +19854,11 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/SpookyLevel.unity
   m_Name: pb_Mesh-3796
+=======
+  m_Name: pb_Mesh-6020
+>>>>>>> 4e061316b975fd5a43bacf5bf4e25c43cd20917a:Assets/Scenes/Level.unity
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -21086,7 +21130,11 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/SpookyLevel.unity
   m_Name: pb_Mesh-3558
+=======
+  m_Name: pb_Mesh-5774
+>>>>>>> 4e061316b975fd5a43bacf5bf4e25c43cd20917a:Assets/Scenes/Level.unity
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -21516,7 +21564,11 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/SpookyLevel.unity
   m_Name: pb_Mesh-3836
+=======
+  m_Name: pb_Mesh-6028
+>>>>>>> 4e061316b975fd5a43bacf5bf4e25c43cd20917a:Assets/Scenes/Level.unity
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -22351,79 +22403,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!1 &2051215505
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2051215506}
-  - component: {fileID: 2051215508}
-  - component: {fileID: 2051215507}
-  m_Layer: 5
-  m_Name: Wins
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &2051215506
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2051215505}
-  m_LocalRotation: {x: -0, y: -0, z: -0.23242146, w: 0.97261524}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
-  m_Children: []
-  m_Father: {fileID: 572654105}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -26.879002}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 199, y: 79}
-  m_SizeDelta: {x: 950, y: 538}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2051215507
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2051215505}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b37a5a0184cbb3d439a06567b902c178, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &2051215508
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2051215505}
-  m_CullTransparentMesh: 0
 --- !u!43 &2058515902
 Mesh:
   m_ObjectHideFlags: 0
@@ -23371,13 +23350,29 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!114 &2071521027 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2071521027, guid: f6abbcc22ae1f6e009e7203eea079db5,
+    type: 3}
+  m_PrefabInstance: {fileID: 4408194997158315810}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!43 &2078427271
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/SpookyLevel.unity
   m_Name: pb_Mesh-3556
+=======
+  m_Name: pb_Mesh-5772
+>>>>>>> 4e061316b975fd5a43bacf5bf4e25c43cd20917a:Assets/Scenes/Level.unity
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -23573,7 +23568,11 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:Assets/Scenes/SpookyLevel.unity
   m_Name: pb_Mesh-3754
+=======
+  m_Name: pb_Mesh-6004
+>>>>>>> 4e061316b975fd5a43bacf5bf4e25c43cd20917a:Assets/Scenes/Level.unity
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -24325,100 +24324,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4408194997020688708, guid: f6abbcc22ae1f6e009e7203eea079db5,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
+    - target: {fileID: 111859653, guid: f6abbcc22ae1f6e009e7203eea079db5, type: 3}
+      propertyPath: hudText
+      value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 4408194997020688709, guid: f6abbcc22ae1f6e009e7203eea079db5,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2.5
+    - target: {fileID: 111859653, guid: f6abbcc22ae1f6e009e7203eea079db5, type: 3}
+      propertyPath: conditionalText
+      value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 4408194997020688709, guid: f6abbcc22ae1f6e009e7203eea079db5,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2.5
+    - target: {fileID: 111859653, guid: f6abbcc22ae1f6e009e7203eea079db5, type: 3}
+      propertyPath: displayText
+      value: 
+      objectReference: {fileID: 850435724}
+    - target: {fileID: 111859653, guid: f6abbcc22ae1f6e009e7203eea079db5, type: 3}
+      propertyPath: timedText
+      value: 
+      objectReference: {fileID: 2071521027}
+    - target: {fileID: 850435722, guid: f6abbcc22ae1f6e009e7203eea079db5, type: 3}
+      propertyPath: m_Name
+      value: TimerText
       objectReference: {fileID: 0}
-    - target: {fileID: 4408194997020688709, guid: f6abbcc22ae1f6e009e7203eea079db5,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4408194997062817857, guid: f6abbcc22ae1f6e009e7203eea079db5,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4408194997062817862, guid: f6abbcc22ae1f6e009e7203eea079db5,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4408194997062817862, guid: f6abbcc22ae1f6e009e7203eea079db5,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4408194997062817862, guid: f6abbcc22ae1f6e009e7203eea079db5,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 45
-      objectReference: {fileID: 0}
-    - target: {fileID: 4408194997062817862, guid: f6abbcc22ae1f6e009e7203eea079db5,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 1920
-      objectReference: {fileID: 0}
-    - target: {fileID: 4408194997062817862, guid: f6abbcc22ae1f6e009e7203eea079db5,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 1080
-      objectReference: {fileID: 0}
-    - target: {fileID: 4408194997170320546, guid: f6abbcc22ae1f6e009e7203eea079db5,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4408194997170320546, guid: f6abbcc22ae1f6e009e7203eea079db5,
-        type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4408194997170320546, guid: f6abbcc22ae1f6e009e7203eea079db5,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4408194997170320546, guid: f6abbcc22ae1f6e009e7203eea079db5,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4408194997170320546, guid: f6abbcc22ae1f6e009e7203eea079db5,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 1500
-      objectReference: {fileID: 0}
-    - target: {fileID: 4408194997170320546, guid: f6abbcc22ae1f6e009e7203eea079db5,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 500
-      objectReference: {fileID: 0}
-    - target: {fileID: 4408194997170320546, guid: f6abbcc22ae1f6e009e7203eea079db5,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4408194997170320546, guid: f6abbcc22ae1f6e009e7203eea079db5,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4408194997170320547, guid: f6abbcc22ae1f6e009e7203eea079db5,
-        type: 3}
-      propertyPath: m_PreserveAspect
-      value: 0
+    - target: {fileID: 2071521025, guid: f6abbcc22ae1f6e009e7203eea079db5, type: 3}
+      propertyPath: m_Name
+      value: RoundText
       objectReference: {fileID: 0}
     - target: {fileID: 4408194997662245465, guid: f6abbcc22ae1f6e009e7203eea079db5,
         type: 3}
@@ -24529,86 +24457,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4408194997662245471, guid: f6abbcc22ae1f6e009e7203eea079db5,
-        type: 3}
-      propertyPath: m_UiScaleMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4408194997662245471, guid: f6abbcc22ae1f6e009e7203eea079db5,
-        type: 3}
-      propertyPath: m_ReferenceResolution.x
-      value: 1920
-      objectReference: {fileID: 0}
-    - target: {fileID: 4408194997662245471, guid: f6abbcc22ae1f6e009e7203eea079db5,
-        type: 3}
-      propertyPath: m_ReferenceResolution.y
-      value: 1080
-      objectReference: {fileID: 0}
-    - target: {fileID: 4408194997662245538, guid: f6abbcc22ae1f6e009e7203eea079db5,
-        type: 3}
-      propertyPath: Loop
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4408194998084904897, guid: f6abbcc22ae1f6e009e7203eea079db5,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 4408194998084904897, guid: f6abbcc22ae1f6e009e7203eea079db5,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4408194998084904902, guid: f6abbcc22ae1f6e009e7203eea079db5,
-        type: 3}
-      propertyPath: m_FillAmount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4408194998701687141, guid: f6abbcc22ae1f6e009e7203eea079db5,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4408194998701687141, guid: f6abbcc22ae1f6e009e7203eea079db5,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 4408194998701687146, guid: f6abbcc22ae1f6e009e7203eea079db5,
-        type: 3}
-      propertyPath: m_FillAmount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4408194998858378649, guid: f6abbcc22ae1f6e009e7203eea079db5,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4408194998858378649, guid: f6abbcc22ae1f6e009e7203eea079db5,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4408194998858378649, guid: f6abbcc22ae1f6e009e7203eea079db5,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -151
-      objectReference: {fileID: 0}
-    - target: {fileID: 4408194998858378649, guid: f6abbcc22ae1f6e009e7203eea079db5,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 1157
-      objectReference: {fileID: 0}
-    - target: {fileID: 4408194998858378649, guid: f6abbcc22ae1f6e009e7203eea079db5,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 4408194998858378654, guid: f6abbcc22ae1f6e009e7203eea079db5,
-        type: 3}
-      propertyPath: m_Color.a
-      value: 0.19607843
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6abbcc22ae1f6e009e7203eea079db5, type: 3}
