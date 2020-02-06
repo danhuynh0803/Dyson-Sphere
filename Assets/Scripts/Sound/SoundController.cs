@@ -5,8 +5,16 @@ using UnityEngine;
 
 public enum SFX
 {
+    vac0,
+    vac1,
+    vac2,
+    vac3,
+    vac4,
+    build,
+    shoot,
+    whistle
 
-}
+};
 
 public class SoundController : MonoBehaviour
 {

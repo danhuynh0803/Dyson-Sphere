@@ -18,7 +18,9 @@ class InfoText
 public class InfoBoard : MonoBehaviour
 {
     public Text timedText;         // Text that is displayed for a brief moment
+    public Text timedInnerText;
     public Text displayText;       // Text that is displayed when a condition is met
+    public Text displayInnerText;       // Text that is displayed when a condition is met
     public float letterDelay = 0.1f;
 
     #region Singleton
@@ -78,18 +80,21 @@ public class InfoBoard : MonoBehaviour
     public void DisplayText(string text)
     {
         displayText.text = text;
+        displayInnerText.text = text;
     }
 
     private IEnumerator DisplayAndWait(InfoText infoText)
     {
         // Clear any old text before display the new text
         timedText.text = "";
+        timedInnerText.text = "";
         // Display the text letter-by-letter
         isDisplayingText = true;
         foreach (char letter in infoText.text)
         {
             // TODO: play some sound when a new letter is appended
             timedText.text += letter;
+            timedInnerText.text += letter;
             yield return new WaitForSeconds(letterDelay);
         }
 
@@ -97,6 +102,7 @@ public class InfoBoard : MonoBehaviour
 
         // Clear the text after the specified time
         timedText.text = "";
+        timedInnerText.text = "";
         isDisplayingText = false;
     }
 }

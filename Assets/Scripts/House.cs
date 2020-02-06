@@ -52,16 +52,8 @@ public class House : MonoBehaviour
         blueWinner.SetActive(false);
     }
 
-    // Update is called once per frame
     void Update()
     {
-        /*if (currScore >= maxScore)
-        {
-            // Setting this to true will trigger win scene
-            // TODO maybe make a win panel instead
-            GameController.instance.isGameOver = true;
-        }*/
-
         // Update player fill bars
         redBar.fillAmount = (float)redPoint / (float)maxScore;
         blueBar.fillAmount = (float)bluePoint / (float)maxScore;
@@ -91,7 +83,9 @@ public class House : MonoBehaviour
 
             if (timer <= 0)
             {
-                EndGame();
+                SoundController.Play(SFX.whistle, 0.5f);
+                StartCoroutine("EndGame");
+                InfoBoard.instance.AddText("FINISHED!", 1.0f);
             }
         }
     }
@@ -121,32 +115,39 @@ public class House : MonoBehaviour
                     blueObjects.Push(houseProgressionModels[currScore]);
                     bluePoint++;
                 }
+
+                houseProgressionModels[currScore].SetActive(true);
+                currScore++;
             }
             else
             {
                 if (controllingPlayer == Player.P1)
                 {
-                    bluePoint--;
-                    redPoint++;
-                    GameObject wall = blueObjects.Pop();
-                    wall.GetComponent<Renderer>().material = p1Color;
-                    redObjects.Push(wall);
+                    if (blueObjects.Count > 0)
+                    {
+                        bluePoint--;
+                        redPoint++;
+                        GameObject wall = blueObjects.Pop();
+                        wall.GetComponent<Renderer>().material = p1Color;
+                        redObjects.Push(wall);
+                    }
                 }
                 else if (controllingPlayer == Player.P2)
                 {
-                    redPoint--;
-                    bluePoint++;
-                    GameObject wall = redObjects.Pop();
-                    wall.GetComponent<Renderer>().material = p2Color;
-                    blueObjects.Push(wall);
+                    if (redObjects.Count > 0)
+                    {
+                        redPoint--;
+                        bluePoint++;
+                        GameObject wall = redObjects.Pop();
+                        wall.GetComponent<Renderer>().material = p2Color;
+                        blueObjects.Push(wall);
+                    }
                 }
             }
 
             Destroy(other.gameObject);
-            houseProgressionModels[currScore].SetActive(true);
 
             SoundController.Play(5, 0.1f); //play point noise
-            currScore++;
 
             if (currScore >= maxScore)
             {
@@ -154,14 +155,17 @@ public class House : MonoBehaviour
             }
         }
     }
-
-    void EndGame()
+    IEnumerator EndGame()
     {
         isGameOver = true;
+
+        yield return new WaitForSeconds(3.0f);
+
         // Clear out timer text
         InfoBoard.instance.DisplayText("");
 
-        cameraOne.SetActive(false);
+        //cameraOne.SetActive(false);
+        cameraOne.GetComponent<Camera>().enabled = false;
         cameraTwo.SetActive(false);
         cameraThree.SetActive(true);
         playerRed.SetActive(false);
