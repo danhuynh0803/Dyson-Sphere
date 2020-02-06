@@ -47,6 +47,14 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        // ====================================================
+        // REMOVE in final. Just for testing end conditions
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    carriedCount++;
+        //}
+        // ====================================================
+
         Collect();
         Fire();
     }
@@ -147,10 +155,9 @@ public class PlayerController : MonoBehaviour
             anim.SetTrigger("Suck");
             SoundController.Play(random, 0.1f);
             GameObject[] fragments = GameObject.FindGameObjectsWithTag("Fragment");
-            Debug.Log(fragments.Length);
             foreach (var fragment in fragments)
             {
-                Debug.Log(Vector3.Distance(hose.position, fragment.transform.position));
+                //Debug.Log(Vector3.Distance(hose.position, fragment.transform.position));
                 if (Vector3.Distance(hose.position, fragment.transform.position) <= suckDistance)
                 {
                     carriedCount++;
@@ -196,5 +203,10 @@ public class PlayerController : MonoBehaviour
             carriedCount++;
             Destroy(other.gameObject);
         }
+    }
+
+    public int GetCarriedCount()
+    {
+        return carriedCount;
     }
 }

@@ -102,7 +102,7 @@
                 float4 rim = rimIntensity * _RimColor;
 
                 // Map sin to [0, 1]
-                float delta = 10*_SinTime[3] * 0.5f + 0.5f;
+                float delta = 20*_SinTime[3] * 0.5f + 0.5f;
                 col = (_Ambient + diffuse + specular + rim) * lerp(_Color, _GlowColor, delta);
                return col;
             }
